@@ -28,17 +28,14 @@
                 var y = Math.floor(Math.random() * $(window).height() -50);
                 $("img").offset({top:y, left:x});
                 if(y>300 && y<=500){
-                    //$("#target").explode({"minWidth":3,"maxWidth":12,"radius":235,"minRadius":15,"release":false,"fadeTime":300,"recycle":false,"recycleDelay":500,"explodeTime":231,"round":false,"minAngle":0,"maxAngle":360,"gravity":10,"groundDistance":236});
+                    alert("Terminé !!!","Attention ça ve exploser !!!");
+                    $("#tratra").toggle("explode");
                     var audio = new Audio('explosion2.mp3');
                         audio.play();
-                    $("#tratra").toggle("explode");
-                    alert("Terminé !!!");
+                    
                     
                 }
-                /*  
-                var audio = new Audio('explosion2.mp3');
-                audio.play();
-                */
+
             })
         })
         </script>
