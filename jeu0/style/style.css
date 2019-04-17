@@ -1,0 +1,41 @@
+
+      /*------- DEBUT NAVBAR (Style)------------*/
+      ul {
+        position: fixed;
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        background-color: #000;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: rgb(80, 79, 79);
+        color: white;
+        /*text-decoration: underline;*/
+      }
+      /*--------- FIN NAVBAR (Style) ------------*/
+      .bandeau{
+        position: fixed;
+        width: 100%;
+        
+        margin-top: 10px;/*52px;*/
+        padding: 40px;
+        /*overflow: hidden;*/
+        color: white;
+        background-color: rgb(3, 11, 124); 
+        z-index: -1;
+      }

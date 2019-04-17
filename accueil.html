@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jeu en  en JAVASCRIPT</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            
+        }
+        @font-face {
+            font-family: aeromatics;
+            src: url(fonts/aeromatics.ttf);
+        }
+        @font-face {
+            font-family: Pinewood;
+            src: url(fonts/Pinewood.ttf);
+        }
+
+
+        @font-face {
+            font-family: flaemische;
+            src: url(fonts/flaemische.ttf);
+        }
+        @font-face {
+            font-family: "AeroMaticsStencilRegular";
+            src: url(fonts/AeroMaticsStencilRegular.ttf);
+        }
+        @font-face {
+            font-family: NixieOne-Regular;
+            src: url(fonts/NixieOne-Regular.ttf);
+            /* font-weight: bold; */
+            font-size: 25px;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index:5;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background: #fff;
+            color: black;
+        }
+    
+        .titre {
+            padding: 16px;
+            margin-top: 30px;
+            height: 100%; 
+        }
+    .foot{
+        position: fixed;
+        padding-bottom: 35px;
+        background: black;
+        bottom: 0;
+        width:100%;
+
+    }
+  
+    h1{
+        
+        font-family: Pinewood;
+        font-size: 70px;
+        color: #f13413;
+        text-align: center;
+    }
+    /*
+    #soratra {
+        width: 150px;
+        height: 150px;
+        margin-right: 15px;
+        padding: 10px;
+        border: 1px solid #2306a3;
+        
+    }*/
+    #div1 {
+        width: 800px; /*800px*/
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border: 4px solid #d44006;
+        
+    }
+    #fruits{
+        position: relative;
+        top: 250px;
+        left: 50px;
+    }
+    </style>
+    <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+              alert("Trouvé : "+document.getElementById(data));
+            }
+            
+            function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+              
+            }
+            
+            function drop(ev) {
+              ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+              
+            }
+
+            function atsoy() {
+              document.getElementById("soratra").innerHTML = document.getElementById("soratra").value;
+            }
+            
+    </script>
+    <script src="jquery-3.4.0.js"></script>
+    
+            
+   
+<body>
+
+
+        <script type="text/javascript">
+            function insertText(elemID, text)
+            {
+              var elem = document.getElementById(elemID);
+              elem.innerHTML += text;
+            }
+        </script>
+
+    <div class="navbar">
+        <a href="accueil.html">Réinitialiser</a>
+        <a href="#nouveau">Nouveau Jeu</a>
+
+        <a href="#contact">Contact</a>
+    </div><br><br><br>
+    <h1>5 FRUITS et LEGUMES</h1>
+    <div class="row justify-content-center" >
+        <div class="col=md-3">
+                <textarea id="teksta" rows=11></textarea>
+        </div>
+
+        <div class="col=md-5">
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p id="soratra"></p>
+                </div>
+        </div>
+
+
+        <div class="col=md-3">
+                <textarea id="teksta1" rows=11></textarea>
+        </div>
+    </div>
+    <!--<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p id="soratra"></p>
+    </div>-->
+    
+          
+    
+    
+    <div align="center">
+        <img id="drag1" src="images/cerises.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Cerises\n"); value="Cerises">
+        <img id="drag2" src="images/fraises.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Fraises\n"); value="Fraises">
+        <img id="drag3" src="images/kiwi.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Kiwi\n"); value="Kiwi">
+        <img id="drag4" src="images/ananas.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Ananas\n"); value="Ananas">
+        <img id="drag5" src="images/mangues.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Mangues\n"); value="Mangues">
+        <img id="drag6" src="images/bananes.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Bananes\n"); value="Bananes">
+        <img id="drag7" src="images/peches.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Pêches\n"); value="Pêches">
+        <img id="drag8" src="images/raisins.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta","Raisins\n"); value="Raisins">
+
+        <br><br>
+        <img id="grad1" src="images/aubergine.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Aubergines\n"); value="Aubergine">
+        <img id="grad2" src="images/bettraves.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Bettraves\n"); value="Bettraves">
+        <img id="grad3" src="images/choux-fleur.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Choux-fleur\n"); value="Choux fleur">
+        <img id="grad4" src="images/citrouille.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Citrouille\n"); value="Citrouille">
+        <img id="grad5" src="images/courgettes.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Courgettes\n"); value="Courgettes">
+        <img id="grad6" src="images/haricots-vert.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Haricots-vert\n"); value="Haricot vert">
+        <img id="grad7" src="images/poireaux.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Poireaux\n"); value="Poireaux">
+        <img id="grad8" src="images/maches.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Maches\n"); value="Maches">
+        <img id="grad9" src="images/navet.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Navet\n"); value="Navet">
+        <img id="grad10" src="images/tomates.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Tomates\n"); value="Tomates">
+        <img id="grad11" src="images/pommedeterres.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Pomme-de-terres\n"); value="Pomme de terres">
+        <img id="grad12" src="images/rockets.png" draggable="true" ondragstart="drag(event)" onclick=insertText("teksta1","Rockets\n"); value="Rockets">
+
+
+
+        
+    </div>
+    
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <!--
+        <div align="center">
+            
+            <button onclick="atsoy()" value="Cerises">Cerises</button>
+            <button onclick="atsoy()"value="Fraises">Fraises</button>
+            <button onclick="atsoy()"value="Kiwi">Kiwi</button>
+            <button onclick="atsoy()" value="Ananas">Ananas</button>
+            <button onclick="atsoy()" value="Mangues">Mangues</button>
+            <button onclick="atsoy()" value="Bananes">Bananes</button>
+            <button onclick="atsoy()" value="Pêches">Pêches</button>
+            <button onclick="atsoy()" value="Raisins">Raisins</button>
+        </div>
+    -->
+
+    <div class="foot">
+        <div align="center" style="color: white">Jeu interactif</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>La fuite</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/boostrap.css">
+        <script src="script/jquery-3.4.0.js"></script>
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    </head>
+    <body>
+        <h1>A LA POURSUITE DE ROMAIN</h1>
+        <img src="images/romain.png" id="tratra">
+        <!--<img src="images/oranges.png">-->
+
+        <script>
+        $(document).ready(function(){
+            $("img").offset({top: 200, left: 500});
+            $("img").on("mouseenter", function(){
+                var x = Math.floor(Math.random() * $(window).width() -50);
+                var y = Math.floor(Math.random() * $(window).height() -50);
+                $("img").offset({top:y, left:x});
+                if(y>300 && y<=500){
+                    //$("#target").explode({"minWidth":3,"maxWidth":12,"radius":235,"minRadius":15,"release":false,"fadeTime":300,"recycle":false,"recycleDelay":500,"explodeTime":231,"round":false,"minAngle":0,"maxAngle":360,"gravity":10,"groundDistance":236});
+                    var audio = new Audio('explosion2.mp3');
+                        audio.play();
+                    $("#tratra").toggle("explode");
+                    alert("Terminé !!!");
+                    
+                }
+                /*  
+                var audio = new Audio('explosion2.mp3');
+                audio.play();
+                */
+            })
+        })
+        </script>
+    </body>
+</html>
